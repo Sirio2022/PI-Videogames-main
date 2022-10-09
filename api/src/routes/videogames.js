@@ -91,7 +91,7 @@ router.get("/", async (req, res) => {
     });
 
     const allvgames = dbxgames.concat(apixgames);
-    res.json(allvgames.length ? allvgames : "No se encontraron videojuegos");
+    res.json(allvgames.length ? allvgames : "No se encontraron videojuegos con ese tipo de busqueda");
   } catch (error) {
     res.send(`Error in route /videogames ${error}`);
   }
