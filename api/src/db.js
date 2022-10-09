@@ -43,8 +43,8 @@ const { Videogame, Genre } = sequelize.models;
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 
-Videogame.belongsToMany(Genre, { through: "vgame_genre" });
-Genre.belongsToMany(Videogame, { through: "vgame_genre" });
+Videogame.belongsToMany(Genre, { through: "videogame_genre" });
+Genre.belongsToMany(Videogame, { through: "videogame_genre" });
 
 const popgenres = async () => { 
   const apigenres = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)
