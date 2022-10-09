@@ -101,10 +101,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+
+//Buscar el videojuego por ID
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     if (!isNaN(id)) {
+
+  //Buscamos el videojuego en la API
       var idkey = parseInt(id);
       const result = await axios.get(
         `https://api.rawg.io/api/games/${idkey}?key=${apikey}`
@@ -131,6 +135,7 @@ router.get("/:id", async (req, res) => {
       }
     }
 
+    //Buscamos el videojuego en la base de datos.
     var searchdbvg = await Videogame.findByPk(id, {
       include: [
         {
