@@ -39,8 +39,10 @@ router.get("/", async (req, res) => {
       }
       await SearchApi();
     }
+
+    //Acá tenemos un array con los videojuegos de la API
     if (apiresultado.length > 0) {
-      var apixgames = apiresultado.map((p) => {
+      var apivgames = apiresultado.map((p) => {
         let b = [];
         for (i = 0; i < p.genres.length; i++) {
           b.push(p.genres[i].name);
@@ -55,14 +57,15 @@ router.get("/", async (req, res) => {
         };
       });
       if (name) {
-        apixgames = apixgames.filter((p) =>
+        apivgames = apivgames.filter((p) =>
           p.name.toLowerCase().includes(name.toLowerCase())
         );
       }
-    } else var apixgames = [];
+    } else var apivgames = [];
 
-    var dbxgames = [];
-    dbxgames = await Videogame.findAll({
+    // Acá un array con los personajes de la base de datos. Esto es a la hora de crear un videojuego.
+    var dbvgames = [];
+    dbvgames = await Videogame.findAll({
       include: {
         model: Genre,
         attributes: ["name"],
@@ -70,11 +73,11 @@ router.get("/", async (req, res) => {
       },
     });
     if (name) {
-      dbxgames = dbxgames.filter((p) =>
+      dbvgames = dbvgames.filter((p) =>
         p.name.toLowerCase().includes(name.toLowerCase())
       );
     }
-    var dbxgames = dbxgames.map((p) => {
+    var dbvgames = dbvgames.map((p) => {
       let b = [];
       for (i = 0; i < p.genres.length; i++) {
         b.push(p.genres[i].name);
@@ -90,7 +93,8 @@ router.get("/", async (req, res) => {
       };
     });
 
-    const allvgames = dbxgames.concat(apixgames);
+    //Acá vamos a juntar los 2 arreglos.
+    const allvgames = dbvgames.concat(apivgames);
     res.json(allvgames.length ? allvgames : "No se encontraron videojuegos con ese tipo de busqueda");
   } catch (error) {
     res.send(`Error in route /videogames ${error}`);
