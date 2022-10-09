@@ -34,7 +34,7 @@ router.get("/", async (req, res) => {
               .concat(values[2].data.results);
           });
         } catch (err) {
-          console.log("Error searchin the API: ", err);
+          console.log("Error al buscar en la API: ", err);
         }
       }
       await SearchApi();
@@ -91,7 +91,7 @@ router.get("/", async (req, res) => {
     });
 
     const allvgames = dbxgames.concat(apixgames);
-    res.json(allvgames.length ? allvgames : "No videogames found");
+    res.json(allvgames.length ? allvgames : "No se encontraron videojuegos");
   } catch (error) {
     res.send(`Error in route /videogames ${error}`);
   }
@@ -156,7 +156,7 @@ router.get("/:id", async (req, res) => {
       };
       return res.status(200).json(objdbgame);
     }
-    return res.status(404).send("Videogame not found");
+    return res.status(404).send("Videojuego no encontrado");
   } catch (error) {
     res.send(`Error in Rute /videogames:id ${error}`);
   }
@@ -172,7 +172,7 @@ router.post("/delete/:name", async (req, res) => {
   } catch (error) {
     res.send(`Error in route /videogames/delete ${error}`);
   }
-  res.send("Videogame has been deleted");
+  res.send("El videojuego fue eliminado");
 });
 
 router.post("/", async (req, res) => {
@@ -192,7 +192,7 @@ router.post("/", async (req, res) => {
 
   addVgame.addGenre(vg_genre);
 
-  res.send("New video game has been added");
+  res.send("El nuevo videojuego fue agregado");
 });
 
 module.exports = router;
