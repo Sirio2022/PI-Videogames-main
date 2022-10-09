@@ -49,7 +49,7 @@ Genre.belongsToMany(Videogame, { through: "videogame_genre" });
 const popgenres = async () => { 
   const apigenres = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)
   const genres = apigenres.data.results.map(p => p.name)
-// Add all genres to the Database
+// Agregamos los generos a la base de datos
   genres.forEach(p => {
       Genre.findOrCreate({
            where: {name: p}
