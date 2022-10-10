@@ -86,7 +86,7 @@ router.get("/", async (req, res) => {
         id: p.id,
         name: p.name,
         image:
-          "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg",
+          "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
         genres: b.toString(),
         rating: p.rating,
         origin: "DB",
@@ -158,7 +158,7 @@ router.get("/:id", async (req, res) => {
         platforms: searchdbvg.platform,
         released: searchdbvg.reldate,
         image:
-          "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg",
+          "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
         description: searchdbvg.description,
         rating: searchdbvg.rating,
         genres: genrestr.toString(),
@@ -201,7 +201,7 @@ router.post("/", async (req, res) => {
 
   addVgame.addGenre(vg_genre);
 
-  res.send("El nuevo videojuego fue agregado");
+  res.send("El nuevo videojuego fue agregado correctamente");
 });
 
 module.exports = router;
