@@ -7,6 +7,8 @@ import {
   GET_VIDEOGAMES_BY_NAME,
   GET_VIDEOGAME_BY_ID,
   POST_VIDEOGAME,
+  SORT_VIDEOGAMES,
+  VIDEOGAMES_ORIGIN,
 } from "../actions";
 
 const initialstate = {
@@ -70,15 +72,65 @@ export default function rootreducer(state = initialstate, action) {
         };
       }
     case POST_VIDEOGAME:
-      return{
-        ...state
-      }
+      return {
+        ...state,
+      };
     case DELETE_VIDEOGAME:
-      return{
-        ...state
+      return {
+        ...state,
+      };
+    case VIDEOGAMES_ORIGIN:
+      const videogameorigin = state.videogamesfilter;
+      const filterorigin =
+        action.payload === "DB"
+          ? videogameorigin.filter((p) => p.origin === "DB")
+          : videogameorigin.filter((p) => p.origin === "API");
+      return {
+        ...state,
+        videogames:
+          action.payload === "All" ? state.videogamesfilter : filterorigin,
+      };
+    case SORT_VIDEOGAMES:
+      if (action.payload === "rating") {
+        let sortedArray = state.videogames.sort(function (a, b) {
+          if (a.rating > b.rating) {
+            return -1;
+          }
+          if (b.rating > a.rating) {
+            return 1;
+          }
+          return 0;
+        });
+        return {
+          ...state,
+          videogames: sortedArray,
+        };
+      } else {
+        let sortedArray =
+          action.payload === "asc"
+            ? state.videogames.sort(function (a, b) {
+                if (a.name > b.name) {
+                  return 1;
+                }
+                if (b.name > a.name) {
+                  return -1;
+                }
+                return 0;
+              })
+            : state.videogames.sort(function (a, b) {
+                if (a.name > b.name) {
+                  return -1;
+                }
+                if (b.name > a.name) {
+                  return 1;
+                }
+                return 0;
+              });
+        return {
+          ...state,
+          videogames: sortedArray,
+        };
       }
-    
-
     default:
       return state;
   }
