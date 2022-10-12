@@ -5,7 +5,7 @@ import LandingPage from "../components/LandingPage/LandingPage";
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="App">
         <Switch>
           <Route exact patch="/" component={LandingPage} />
         </Switch>
