@@ -17,14 +17,17 @@ class Videogames extends React.Component {
   render() {
     return (
       <div>
-        <h4>Componente videogames</h4>
+        <br></br>
+        <h1>BIENVENIDOS A LA APP DE VIDEOJUEGOS DE SIRIO2022</h1>
         {this.props.videogames.map((vg) => (
           <VideoGameCard 
           name={vg.name}
           image={vg.image}
           genres={vg.genres}
           rating={vg.rating}
-          origin={vg.origin}  />
+          origin={vg.origin}
+          key={vg.id} 
+          id={vg.id} />
         ))}
       </div>
     );
