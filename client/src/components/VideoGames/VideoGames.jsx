@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import getallvideogames from "../../actions/getallvideogames.js";
 import VideoGameCard from "../VideogameCard/VideogameCard.js";
 
+
 class Videogames extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +16,7 @@ class Videogames extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         <h4>Componente videogames</h4>
         {this.props.videogames.map((vg) => (
           <VideoGameCard 
@@ -25,7 +26,7 @@ class Videogames extends React.Component {
           rating={vg.rating}
           origin={vg.origin}  />
         ))}
-      </>
+      </div>
     );
   }
 }
