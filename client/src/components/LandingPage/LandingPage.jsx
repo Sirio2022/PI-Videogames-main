@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./LandingPage.module.css";
@@ -11,7 +12,7 @@ class LandingPage extends React.Component {
   render() {
     return (
       <div className={style.lpcontainer}>
-        <Link to="/home">
+        <Link to="/videogames">
           <button className={style.but}>ENTRAR</button>
         </Link>
       </div>
