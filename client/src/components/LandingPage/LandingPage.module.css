@@ -1,15 +1,16 @@
-body{
-   
+.bgcontainer{
     background-image: url("../../img/Landing\ Page.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: initial;
 }
+
 
 .lpcontainer {
     display:flex;
     width: 1260px;
     right: 20% auto;
     margin: 100px solid salmon;
+   
         
 }
 .but{

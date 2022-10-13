@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default function getallvideogames() {
   return async function (dispatch) {
-    var result = await axios.get("http://localhost:3001/vidogames");
+    var result = await axios.get("http://localhost:3001/videogames");
     console.log(result);
     return dispatch({ type: GET_ALLVIDEOGAMES, payload: result.data });
   };
