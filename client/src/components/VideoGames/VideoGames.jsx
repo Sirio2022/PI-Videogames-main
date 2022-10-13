@@ -3,7 +3,7 @@ import React from "react";
 import { connect } from "react-redux";
 import getallvideogames from "../../actions/getallvideogames.js";
 import VideoGameCard from "../VideogameCard/VideogameCard.js";
-
+import s from "./VideoGames.module.css";
 
 class Videogames extends React.Component {
   constructor(props) {
@@ -16,18 +16,17 @@ class Videogames extends React.Component {
 
   render() {
     return (
-      <div>
-        <br></br>
-        <h1>BIENVENIDOS A LA APP DE VIDEOJUEGOS DE SIRIO2022</h1>
+      <div className={s.container}>
         {this.props.videogames.map((vg) => (
-          <VideoGameCard 
-          name={vg.name}
-          image={vg.image}
-          genres={vg.genres}
-          rating={vg.rating}
-          origin={vg.origin}
-          key={vg.id} 
-          id={vg.id} />
+          <VideoGameCard
+            name={vg.name}
+            image={vg.image}
+            genres={vg.genres}
+            rating={vg.rating}
+            origin={vg.origin}
+            key={vg.id}
+            id={vg.id}
+          />
         ))}
       </div>
     );
