@@ -17,7 +17,7 @@ const VideoGameDetail = (props) => {
       <div className={s.contarea}>
         <div>
           <h2>{props.videogamedetails.name}</h2>
-          <Link to="/videogames">
+          <Link to="/home">
             <button className={s.botback}>Home</button>
           </Link>
         </div>

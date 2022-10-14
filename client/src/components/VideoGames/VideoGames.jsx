@@ -16,6 +16,7 @@ class Videogames extends React.Component {
 
   render() {
     return (
+      
       <div className={s.container}>
         {this.props.videogames.map((vg) => (
           <VideoGameCard
@@ -30,7 +31,9 @@ class Videogames extends React.Component {
         ))}
       </div>
     );
+    
   }
+  
 }
 
 const mapStateToProps = (state) => {

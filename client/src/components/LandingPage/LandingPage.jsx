@@ -1,23 +1,43 @@
 /* eslint-disable no-useless-constructor */
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import style from "./LandingPage.module.css";
+import getplarforms from "../../actions/getplatforms";
+import getgenres from "../../actions/getgenres";
+import getallvideogames from "../../actions/getallvideogames";
+import sortvideogames from "../../actions/sortvideogames";
 
+export default function LandingPage() {
+  const dispatch = useDispatch();
 
-class LandingPage extends React.Component {
-  constructor(props) {
-    super(props);
+  useEffect(() => {
+    dispatch(getplarforms());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getgenres());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getallvideogames());
+  }, [dispatch]);
+
+  function handleSortvideogames(e) {
+    dispatch(sortvideogames("asc"));
   }
 
-  render() {
-    return (
-      <div className={style.lpcontainer}>
-        <Link to="/videogames">
-          <button className={style.but}>ENTRAR</button>
-        </Link>
-      </div>
-    );
-  }
+  return (
+    <>
+    <h1 className={style.h1}>BIENVENIDOS A LA APP DE SIRIO 2022</h1>
+    <div className={style.container}>
+      <Link to="/home">
+       
+        <button id="btn" onClick={handleSortvideogames}>
+          COMEZAR APP
+        </button>
+      </Link>
+    </div>
+    </>
+  );
 }
-
-export default LandingPage;

@@ -4,7 +4,7 @@ import LandingPage from "../components/LandingPage/LandingPage.jsx";
 import VideoGames from "../components/VideoGames/VideoGames.jsx"
 import AddVideogame from "../components/AddVideoGame/AddVideoGame.jsx"
 import VideoGameDetail from "../components/VideoGameDetails/VideoGameDetail.jsx"
-import Page404 from "../components/Page404/Page404";
+import HomePage from "../components/HomePage/HomePage.jsx"
 
 function App() {
   return (
@@ -15,7 +15,8 @@ function App() {
           <Route exact path="/videogames" component={VideoGames} />
           <Route exact path="/addvideogame" component={AddVideogame} />
           <Route exact path="/videogame/:id" component={VideoGameDetail}/>
-          <Route path="*" component={Page404} />
+          <Route exact path = '/home' component = {HomePage} />
+          <Route path="*" component={LandingPage} />
         </Switch>
       </div>
     </BrowserRouter>

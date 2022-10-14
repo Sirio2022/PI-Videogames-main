@@ -1,32 +1,16 @@
-.bgcontainer{
-    background-image: url("../../img/Elden\ landing\ Page.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#btn {
+    font-size: 50px;
 }
 
 
-.lpcontainer {
-    display:flex;
-    width: 1260px;
-    right: 20% auto;
-    margin: 100px solid salmon;
-   
-        
-}
-.but{
-    height: 50px;
-    width: 150px;
-    right: 120px;
-    background-color: #596e82;
-    margin-top: 30px;
-    margin-left: 680px;
-    border-radius:10%;
-    box-shadow:3px 2px 5px 1px rgb(214, 83, 22);
-}
-.but:hover{
-    cursor: pointer;
-    font-style:italic;
-    background-color: #e1622f;
-    color: #fff;
-    box-shadow:3px 2px 10px 1px rgb(165, 11, 75);
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
