@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
@@ -103,10 +104,10 @@ export default function AddVideogameByName() {
 
   return (
     <>
-      <div>
+      <div className={style.avgwrapper}>
         <h1 className={style.h1}>Agrega tu propio videojuego</h1>
-        <form onSubmit={handleSubmit}>
-          <div>
+        <form className={style.formarea} onSubmit={handleSubmit}>
+          <div className={style.msgarea}>
             <label>Descripción</label>
             <textarea
               onChange={handleOnChange}
@@ -115,7 +116,7 @@ export default function AddVideogameByName() {
               value={input.description}
             />
           </div>
-          <div>
+          <div className={style.detailsarea}>
             <label>Nombre del juego:</label>
             <input
               onChange={handleOnChange}
@@ -168,10 +169,10 @@ export default function AddVideogameByName() {
               <li>{input.genre.map((p) => p + " ,")}</li>
             </ul>
 
-            <button type="submit">Agregar juego</button>
+            <button className={style.bot}  type="submit">Agregar juego</button>
             <span>
               <Link to="/home">
-                <button>Back To Home</button>
+                <button className={style.bot2}>Volver al home</button>
               </Link>{" "}
             </span>
           </div>
