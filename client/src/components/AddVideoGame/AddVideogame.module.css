@@ -4,19 +4,19 @@
 }
 
 h1 {
-    color:rgb(8, 7, 8);
+    color:rgb(37, 33, 37);
     position: relative;
     margin:0px;
 }
 .formarea {
   display:flex;
-  background: rgb(13, 159, 179);
+  background: #1d171160;
   border-radius: 25px;
   padding: 1.9em;
   margin-top: 30px;
 /*  border-radius:80%; */
-  border: 3px solid rgb(12, 76, 173);
-  box-shadow:4px 3px 6px 2px rgb(41, 233, 240); 
+  border: 3px solid rgb(51, 65, 85);
+  box-shadow:4px 3px 6px 2px rgb(48, 67, 68); 
 }
 h3{
     margin: 0px;
