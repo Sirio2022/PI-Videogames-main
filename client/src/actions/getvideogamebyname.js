@@ -7,6 +7,7 @@ export default function getvideogamebyname(name) {
       var result = await axios.get(
         `http://localhost:3001/videogames?name=${name}`
       );
+      console.log(result)
       return dispatch({
         type: GET_VIDEOGAME_BY_NAME,
         payload: result.data,
