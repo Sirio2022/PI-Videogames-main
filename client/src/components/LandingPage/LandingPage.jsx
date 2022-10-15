@@ -7,7 +7,7 @@ import getplarforms from "../../actions/getplatforms";
 import getgenres from "../../actions/getgenres";
 import getallvideogames from "../../actions/getallvideogames";
 import sortvideogames from "../../actions/sortvideogames";
-import background from "../../img/Elden landing Page.jpg"
+
 
 export default function LandingPage() {
   const dispatch = useDispatch();
@@ -29,17 +29,12 @@ export default function LandingPage() {
   }
 
   return (
-    
     <div>
+     
       <h1>BIENVENIDOS A LA APP DE VIDEO JUEGOS DE SIRIO2022</h1>
       <Link to="/home">
-        
-        <button onClick={handleSortvideogames}>
-          ENTRAR
-        </button>
+        <button className={style.btn}   onClick={handleSortvideogames}>ENTRAR</button>
       </Link>
     </div>
-    
-    
   );
 }

@@ -1,4 +1,8 @@
 .pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style-type: none;
     cursor: pointer;
     margin: 0;
