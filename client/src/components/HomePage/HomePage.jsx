@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useState, useEffect } from "react";
@@ -24,7 +25,7 @@ export default function HomePage() {
     indexOfFirstVideogame,
     indexOfLastVideogame
   );
-  const [render,setRender] = useState('') 
+  const [render, setRender] = useState("");
 
   const paging = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -52,14 +53,20 @@ export default function HomePage() {
   function handleSortvideogames(e) {
     e.preventDefault();
     dispatch(sortvideogames(e.target.value));
-    setRender(`Order ${e.target.value}`)  
+    setRender(`Order ${e.target.value}`);
   }
 
   return (
     <div>
       <Link to="videogame">Crear tu propio videojuego</Link>
       <h1>APP DE VIDEOJUEGOS DE SIRIO2022</h1>
-      <button onClick={(e) => {handleShowAll(e)}}>Recargar todos los Videojuegos</button>
+      <button
+        onClick={(e) => {
+          handleShowAll(e);
+        }}
+      >
+        Recargar todos los Videojuegos
+      </button>
       <div>
         <select
           onChange={(e) => handleSortvideogames(e)}
@@ -90,6 +97,7 @@ export default function HomePage() {
       <div>
         <SearchBar />
       </div>
+
       <div>
         <select
           className={style.hpfilter}

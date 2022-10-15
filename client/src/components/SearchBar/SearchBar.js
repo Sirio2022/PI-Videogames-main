@@ -15,7 +15,8 @@ export default function SearchBar() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(getvideogamebyname());
+    dispatch(getvideogamebyname(name));
+    setName("")
   }
 
   return (

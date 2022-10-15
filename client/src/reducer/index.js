@@ -19,7 +19,7 @@ const initialstate = {
   platforms: [],
 };
 
-export default function rootReducer (state = initialstate, action)  {
+export default function rootReducer(state = initialstate, action) {
   switch (action.type) {
     case GET_ALLVIDEOGAMES:
       if (action.payload) {
@@ -135,4 +135,3 @@ export default function rootReducer (state = initialstate, action)  {
       return state;
   }
 }
-
