@@ -12,7 +12,7 @@
   }
   .contarea {
     display:flex;
-    background: rgb(216, 189, 100);
+    background: rgba(107, 102, 88, 0.815);
     flex-direction: column;
     justify-content: flex-end;
     margin: 300px;

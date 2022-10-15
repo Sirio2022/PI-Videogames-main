@@ -6,8 +6,7 @@ import getallvideogames from "../../actions/getallvideogames";
 import SearchBar from "../SearchBar/SearchBar";
 import Paging from "../Paging/Paging";
 import VideoGameCard from "../VideogameCard/VideogameCard";
-import style from "./HomePage.module.css"
-
+import style from "./HomePage.module.css";
 
 export default function HomePage() {
   const dispatch = useDispatch();
@@ -59,7 +58,7 @@ export default function HomePage() {
           <option value="DB">Creado</option>
         </select>
       </div>
-      <br/>
+      <br />
       <div>
         <Paging
           videogamesPerPage={videogamesPerPage}
@@ -68,6 +67,7 @@ export default function HomePage() {
           currentPage={currentPage}
         />
       </div>
+      <SearchBar />
       <div className={style.container}>
         {currentVideogames?.map((vg) => {
           return (
