@@ -9,13 +9,13 @@ import { getClean } from "../../actions/getclean";
 export default function VideoGameDetail(props) {
   const dispatch = useDispatch();
 
-  const id= props.match.params.id
+  const id = props.match.params.id;
 
   useEffect(() => {
     dispatch(getvideogamebyid(id));
     return () => {
-      dispatch(getClean())
-    }
+      dispatch(getClean());
+    };
   }, [id, dispatch]);
 
   var detail = useSelector((state) => state.videogamedetails);
