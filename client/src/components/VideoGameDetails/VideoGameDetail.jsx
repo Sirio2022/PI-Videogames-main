@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import getvideogamebyid from "../../actions/getvideogamebyid";
 import s from "./VideoGameDetail.module.css";
 import { getClean } from "../../actions/getclean";
@@ -9,7 +9,7 @@ import { getClean } from "../../actions/getclean";
 export default function VideoGameDetail(props) {
   const dispatch = useDispatch();
 
-  const id = props.match.params.id;
+  let {id} = useParams()
 
   useEffect(() => {
     dispatch(getvideogamebyid(id));
