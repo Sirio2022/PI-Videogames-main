@@ -9,6 +9,7 @@ import {
   POST_VIDEOGAME,
   SORT_VIDEOGAMES,
   VIDEOGAMES_ORIGIN,
+  GET_CLEAN,
 } from "../actions";
 
 const initialstate = {
@@ -43,6 +44,11 @@ export default function rootReducer(state = initialstate, action) {
       return {
         ...state,
         videogamedetails: action.payload,
+      };
+    case GET_CLEAN:
+      return {
+        ...state,
+        videogamedetails: [],
       };
     case GET_GENRES:
       let genre = action.payload;

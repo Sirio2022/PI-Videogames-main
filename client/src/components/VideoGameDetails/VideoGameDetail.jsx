@@ -4,13 +4,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import getvideogamebyid from "../../actions/getvideogamebyid";
 import s from "./VideoGameDetail.module.css";
+import { getClean } from "../../actions/getclean";
 
 export default function VideoGameDetail(props) {
   const dispatch = useDispatch();
 
+  const id= props.match.params.id
+
   useEffect(() => {
-    dispatch(getvideogamebyid(props.match.params.id));
-  }, [dispatch]);
+    dispatch(getvideogamebyid(id));
+    return () => {
+      dispatch(getClean())
+    }
+  }, [id, dispatch]);
 
   var detail = useSelector((state) => state.videogamedetails);
 
