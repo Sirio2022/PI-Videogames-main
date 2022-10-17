@@ -14,10 +14,10 @@
     display:flex;
     background: rgba(107, 102, 88, 0.815);
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 300px;
     margin-top: 0px;
-    border:3px solid rgb(128, 21, 95);
+    border:3px solid rgb(0, 0, 0);
     width: 900px;
   }
   .lineflex{
@@ -34,6 +34,7 @@
     align-content:space-around;
     padding: 1px;
     margin: 1px;
+    color: black;
   }
   h5{
     display:flex;
@@ -45,11 +46,11 @@
   .botback {
     padding:1em;
     margin-top: 5px;
-    background: olive;
-    color: black;
+    background:#000000ad;
+    color: #fff;
     border:1;
     height: 40px;
-    border-color: black;
+    border-color: #ffffff41;
     padding: 10px 50px;
     border-radius: 35px;
     font-family: poppins;
@@ -58,6 +59,6 @@
     text-align: center;
   }
   .botback:hover {
-    background-color:rgb(240, 134, 13);
+    background-color:rgb(255, 0, 0);
     color: rgb(63, 6, 6); 
   }

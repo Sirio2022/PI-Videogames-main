@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-useless-constructor */
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -7,7 +9,6 @@ import getplarforms from "../../actions/getplatforms";
 import getgenres from "../../actions/getgenres";
 import getallvideogames from "../../actions/getallvideogames";
 import sortvideogames from "../../actions/sortvideogames";
-
 
 export default function LandingPage() {
   const dispatch = useDispatch();
@@ -30,10 +31,8 @@ export default function LandingPage() {
 
   return (
     <div>
-     
-      <h1>BIENVENIDOS A LA APP DE VIDEO JUEGOS DE SIRIO2022</h1>
       <Link to="/home">
-        <button className={style.btn}   onClick={handleSortvideogames}>ENTRAR</button>
+      <a className={style.btn}><span>ENTRAR A LA APP</span><em></em></a>
       </Link>
     </div>
   );

@@ -8,8 +8,8 @@
 }
 
 .card{
-    background-color: #50473ea2;
-    height: 235px;
+    background-color: #3f3f3f;
+    height: 260px;
     width: 310px;
     margin: 5px;
     padding: 1px;
@@ -34,3 +34,8 @@ p {
     padding: 3px;
     border: 2px solid black;
  }
+ .link {
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+  }

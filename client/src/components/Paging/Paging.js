@@ -26,6 +26,7 @@ export default function Paging({
               </li>
             );
         })}
+        
         <span>{`   Página actual  ${currentPage}`}</span>
        
         

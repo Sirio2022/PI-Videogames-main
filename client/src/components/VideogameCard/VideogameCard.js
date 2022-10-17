@@ -7,7 +7,7 @@ const VideoGameCard = ({ name, image, genres, rating, id }) => {
   return (
     <div className={s.container}>
       <div className={s.card}>
-        <Link to={`/videogame/${id}`}>
+        <Link className={s.link}   to={`/videogame/${id}`}>
         <h4>{name}</h4>
         </Link>
         <p>{genres}</p>
