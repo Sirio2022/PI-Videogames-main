@@ -105,7 +105,6 @@ export default function AddVideogameByName() {
   return (
     <>
       <div className={style.avgwrapper}>
-        <h1 className={style.h1}>Agrega tu propio videojuego</h1>
         <form className={style.formarea} onSubmit={handleSubmit}>
           <div className={style.msgarea}>
             <label>Descripción</label>
@@ -169,7 +168,9 @@ export default function AddVideogameByName() {
               <li>{input.genre.map((p) => p + " ,")}</li>
             </ul>
 
-            <button className={style.bot}  type="submit">Agregar juego</button>
+            <button className={style.bot} type="submit">
+              Agregar juego
+            </button>
             <span>
               <Link to="/home">
                 <button className={style.bot2}>Volver al home</button>

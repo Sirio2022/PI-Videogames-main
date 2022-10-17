@@ -66,8 +66,8 @@ ul {
     color: #fff;
 }
 .bot {
-    background-color:olive;
-    color: whitesmoke;
+    background-color:#000000;
+    color: #fff;
     padding-top: 1px;
     cursor: pointer;
     text-align: center;
@@ -78,11 +78,11 @@ ul {
     align-self:flex-end;
 }
 .bot:hover {
-    background-color:rgb(190, 190, 64);
+    background-color:#1e90ff;
     color: black; 
 }
 .bot2 {
-    background-color:rgb(185, 135, 28);
+    background-color:#000000;
     color: whitesmoke;
     padding-top: 1px;
     cursor: pointer;
@@ -92,7 +92,7 @@ ul {
     transition-duration: 0.4s;
 }
 .bot2:hover {
-    background-color:rgb(238, 205, 135);
+    background-color:#1e90ff;
     color: black; 
 }
 
