@@ -1,14 +1,13 @@
 import React from "react";
 import s from "../VideogameCard/VideogameCard.module.css";
-import {Link} from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 const VideoGameCard = ({ name, image, genres, rating, id }) => {
   return (
     <div className={s.container}>
       <div className={s.card}>
-        <Link className={s.link}   to={`/videogame/${id}`}>
-        <h4>{name}</h4>
+        <Link className={s.link} to={`/videogame/${id}`}>
+          <h4>{name}</h4>
         </Link>
         <p>{genres}</p>
         <img className={s.imag} src={image} alt="Img" />
