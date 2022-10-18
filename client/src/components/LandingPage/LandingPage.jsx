@@ -8,7 +8,7 @@ import style from "./LandingPage.module.css";
 import getplarforms from "../../actions/getplatforms";
 import getgenres from "../../actions/getgenres";
 import getallvideogames from "../../actions/getallvideogames";
-import sortvideogames from "../../actions/sortvideogames";
+
 
 export default function LandingPage() {
   const dispatch = useDispatch();
