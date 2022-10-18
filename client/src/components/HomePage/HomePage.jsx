@@ -60,7 +60,10 @@ export default function HomePage() {
     <div>
       <div className={style.containerbtn}>
       <button className={style.botback}>
-      <Link className={style.link}  to="videogame">Crear tu propio videojuego</Link>
+      <Link className={style.link}  to="/">Ir al inicio</Link>
+      </button>
+      <button className={style.botback}>
+      <Link className={style.link}  to="videogame">Crear videojuego</Link>
       </button>
       <div></div>
       <button
