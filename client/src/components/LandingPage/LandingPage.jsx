@@ -25,9 +25,7 @@ export default function LandingPage() {
     dispatch(getallvideogames());
   }, [dispatch]);
 
-  function handleSortvideogames(e) {
-    dispatch(sortvideogames("asc"));
-  }
+
 
   return (
     <div>
