@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import deletevideogame from "../../actions/deletevideogame";
 import { useDispatch } from "react-redux";
+import style from "./DeleteVideogame.module.css";
 
-export default function DeleteVideogame(payload) {
+export default function DeleteVideogame() {
   const [name, setName] = useState("");
 
   const dispatch = useDispatch();
@@ -14,18 +15,20 @@ export default function DeleteVideogame(payload) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(deletevideogame(payload));
+    dispatch(deletevideogame(name));
+    setName("")
   }
 
   return (
-    <div>
+    <div className={style.sbcontainer}>
       <input
+        className={style.sbinput}
         onChange={(e) => handleinputChange(e)}
         type="text"
         placeholder="Eliminar"
         value={name}
       />
-      <button onClick={(e) => handleSubmit(e)} type="submit">
+      <button className={style.sbbot} onClick={(e) => handleSubmit(e)} type="submit">
         Eliminar juego
       </button>
     </div>
