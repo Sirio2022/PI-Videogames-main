@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import getvideogamebyid from "../../actions/getvideogamebyid";
 import s from "./VideoGameDetail.module.css";
 import { getClean } from "../../actions/getclean";
@@ -9,6 +9,7 @@ import deletevideogame from "../../actions/deletevideogame";
 
 export default function VideoGameDetail(props) {
   const dispatch = useDispatch();
+  const history = useHistory()
 
   let { id } = useParams();
 
@@ -22,6 +23,7 @@ export default function VideoGameDetail(props) {
   function handleDelete(e) {
     e.preventDefault();
     dispatch(deletevideogame(id));
+    history.push("/home")
   }
 
   var detail = useSelector((state) => state.videogamedetails);
