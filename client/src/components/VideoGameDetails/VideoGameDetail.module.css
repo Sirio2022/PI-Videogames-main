@@ -2,7 +2,7 @@
     display:flex;
     margin: 1px;
     width: 1260px;
-    right: 20% auto;
+    right: 20% 10px;
   /*  background: bisque;*/
   }
   .detimg{
@@ -15,10 +15,11 @@
     background: rgba(107, 102, 88, 0.815);
     flex-direction: column;
     justify-content: center;
-    margin: 300px;
-    margin-top: 0px;
+    margin: auto;
+    margin-top: 10px;
     border:3px solid rgb(0, 0, 0);
-    width: 900px;
+    width: 1000px;
+    height: 850px;
   }
   .lineflex{
     display:flex;

@@ -57,7 +57,7 @@ export default function VideoGameDetail(props) {
           <div className={s.lineflex}>
             <h2>{`Rating: ${detail.rating}`}</h2>
           </div>
-
+      
           <div className={s.lineflex}>
             <h4>{`Released date: ${detail.released}`}</h4>
           </div>
