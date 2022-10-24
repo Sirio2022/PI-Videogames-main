@@ -1,5 +1,5 @@
 var express = require("express");
-const { apikey, Videogame, Genre, conn } = require("../db");
+const { apikey, Videogame, Genre} = require("../db");
 var router = express.Router();
 const axios = require("axios");
 

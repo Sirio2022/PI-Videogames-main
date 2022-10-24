@@ -89,7 +89,7 @@ export default function HomePage() {
         </select>
 
         <select onChange={(e) => handleOriginFilter(e)}>
-          <option value="All">Api+DB Games</option>
+          <option value="All">Juegos en la API y BD</option>
           <option value="API">Existente</option>
           <option value="DB">Creado</option>
         </select>
