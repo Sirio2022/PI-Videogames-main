@@ -31,7 +31,7 @@ export default function LandingPage() {
     <div>
       <Link to="/home">
         <a className={style.btn}>
-          <span>ENTRAR A LA APP</span>
+          <span>ENTRAR AL PI VIDEOGAMES</span>
           <em></em>
         </a>
       </Link>

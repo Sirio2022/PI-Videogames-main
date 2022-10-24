@@ -164,6 +164,7 @@ router.get("/:id", async (req, res) => {
         description: searchdbvg.description,
         rating: searchdbvg.rating,
         genres: genrestr.toString(),
+        db: "Juego en DB"
       };
       return res.status(200).json(objdbgame);
     }
@@ -173,15 +174,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.delete("/delete/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   console.log("Delete de: ", id);
   try {
     const elem = await Videogame.findByPk(id);
     await elem.destroy(id);
-    res.send("El videojuego fue eliminado");
+    res.status(200).send("El videojuego fue eliminado");
   } catch (error) {
-    res.send(`Error in route /videogames/delete ${error}`);
+    res.send("No se puedo eliminar el juego");
   }
 });
 
