@@ -2,8 +2,8 @@
     display:flex;
     margin: 1px;
     width: 1260px;
-    right: 20% 10px;
-  /*  background: bisque;*/
+    right: 20% auto;
+  
   }
   .detimg{
     display:flex;
@@ -18,8 +18,8 @@
     margin: auto;
     margin-top: 10px;
     border:3px solid rgb(0, 0, 0);
-    width: 1000px;
-    height: 850px;
+    width: 1400px;
+    height: 770px;
   }
   .lineflex{
     display:flex;
