@@ -1,14 +1,12 @@
 import axios from "axios";
 import { DELETE_VIDEOGAME } from ".";
 
-export default function deletevideogame(name) {
+export default function deletevideogame(id) {
   return async function (dispatch) {
-    var result = await axios.post(
-      `http://localhost:3001/videogames/delete/:${name}`
+    return await axios.delete(
+      `http://localhost:3001/videogames/delete/:${id}`.then((g) =>
+        dispatch({ type: DELETE_VIDEOGAME, payload: g.data })
+      )
     );
-    return dispatch({
-      type: DELETE_VIDEOGAME,
-      payload: result.data
-    });
   };
 }

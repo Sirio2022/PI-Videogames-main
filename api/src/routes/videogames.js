@@ -95,20 +95,22 @@ router.get("/", async (req, res) => {
 
     //Acá vamos a juntar los 2 arreglos.
     const allvgames = dbvgames.concat(apivgames);
-    res.json(allvgames.length ? allvgames : "No se encontraron videojuegos con ese tipo de busqueda");
+    res.json(
+      allvgames.length
+        ? allvgames
+        : "No se encontraron videojuegos con ese tipo de busqueda"
+    );
   } catch (error) {
     res.send(`Error in route /videogames ${error}`);
   }
 });
-
 
 //Buscar el videojuego por ID
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     if (!isNaN(id)) {
-
-  //Buscamos el videojuego en la API
+      //Buscamos el videojuego en la API
       var idkey = parseInt(id);
       const result = await axios.get(
         `https://api.rawg.io/api/games/${idkey}?key=${apikey}`
@@ -171,17 +173,16 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/delete/:name", async (req, res) => {
-  const { name } = req.params;
-  console.log("Delete de: ", name);
+router.delete("/delete/:id", async (req, res) => {
+  const { id } = req.params;
+  console.log("Delete de: ", id);
   try {
-    const elem = await Videogame.destroy({
-      where: { name: `${name}` },
-    });
+    const elem = await Videogame.findByPk(id);
+    await elem.destroy(id);
+    res.send("El videojuego fue eliminado");
   } catch (error) {
     res.send(`Error in route /videogames/delete ${error}`);
   }
-  res.send("El videojuego fue eliminado");
 });
 
 router.post("/", async (req, res) => {
