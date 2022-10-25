@@ -20,16 +20,14 @@ export default function Paging({
       <ul className={style.pagination}>
         {pageNumbers &&
           pageNumbers.map((number) => {
-              return (
-                  <li className={style.pagenr} key={number}>
+            return (
+              <li className={style.pagenr} key={number}>
                 <a onClick={() => paging(number)}>{number}</a>
               </li>
             );
-        })}
-        
+          })}
+
         <span>{`   Página actual  ${currentPage}`}</span>
-       
-        
       </ul>
     </nav>
   );
