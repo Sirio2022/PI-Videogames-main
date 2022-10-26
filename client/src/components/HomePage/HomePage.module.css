@@ -1,80 +1,84 @@
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;  
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
+
 .botback {
-    padding:1em;
-    margin-top: 5px;
-    background:#000000;
-    color: #fff;
-    border:1;
-    height: 40px;
-    border-color: #ffffff41;
-    padding: 10px 50px;
-    border-radius: 10px;
-    font-family: poppins;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  .botback:hover {
-    background-color:#1e90ff;
-    color: rgb(63, 6, 6); 
-  }
-  .containerbtn{
-    display: flex;
-    justify-content: center;
-  }
+  padding: 1em;
+  margin-top: 5px;
+  background: #000000;
+  color: #fff;
+  border: 1;
+  height: 40px;
+  border-color: #ffffff41;
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-family: poppins;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-  .box {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-  }
+.botback:hover {
+  background-color: #1e90ff;
+  color: rgb(63, 6, 6);
+}
 
-  
-  .box select {
-    background-color: #000000;
-    color: white;
-    padding: 12px;
-    width: 250px;
-    border: 10px cornflowerblue;
-    font-size: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    
-  }
-  
-  .box::before {
-    
-    font-family: FontAwesome;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 100%;
-    text-align: center;
-    font-size: 28px;
-    line-height: 45px;
-    color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-  }
-  
-  .box:hover::before {
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .box select option {
-    padding: 30px;
-  }
-  .link {
-    color: #fff;
-    padding: 0 30px;
-    text-decoration: none;
-    font-family: FontAwesome;
-    
-  }
+.containerbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+
+
+.box select {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  width: 250px;
+  border: 10px cornflowerblue;
+  font-size: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.box::before {
+
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.link {
+  color: #fff;
+  padding: 0 30px;
+  text-decoration: none;
+  font-family: FontAwesome;
+
+}

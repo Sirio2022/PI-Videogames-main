@@ -3,6 +3,7 @@ body {
     background-image: url(../src/img/Elden\ landing\ Page.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

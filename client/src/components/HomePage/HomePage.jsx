@@ -18,7 +18,7 @@ export default function HomePage() {
   const allVideogames = useSelector((state) => state.videogames);
   const allgenres = useSelector((state) => state.genres);
   const [currentPage, setCurrentPage] = useState(1);
-  const [videogamesPerPage, setVideogamesPerPage] = useState(10);
+  const [videogamesPerPage, setVideogamesPerPage] = useState(12);
   const indexOfLastVideogame = currentPage * videogamesPerPage;
   const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage;
   const currentVideogames = allVideogames.slice(
@@ -59,21 +59,25 @@ export default function HomePage() {
   return (
     <div>
       <div className={style.containerbtn}>
-      <button className={style.botback}>
-      <Link className={style.link}  to="/">Ir al inicio</Link>
-      </button>
-      <button className={style.botback}>
-      <Link className={style.link}  to="videogame">Crear videojuego</Link>
-      </button>
-      <div></div>
-      <button
-      className={style.botback}
-        onClick={(e) => {
-          handleShowAll(e);
-        }}
-      >
-        Recargar todos los Videojuegos
-      </button>
+        <button className={style.botback}>
+          <Link className={style.link} to="/">
+            Ir al inicio
+          </Link>
+        </button>
+        <button className={style.botback}>
+          <Link className={style.link} to="videogame">
+            Crear videojuego
+          </Link>
+        </button>
+        <div></div>
+        <button
+          className={style.botback}
+          onClick={(e) => {
+            handleShowAll(e);
+          }}
+        >
+          Recargar todos los Videojuegos
+        </button>
         <SearchBar />
       </div>
       <div className={style.box}>
@@ -94,7 +98,6 @@ export default function HomePage() {
           <option value="DB">Creado</option>
         </select>
       </div>
-             
 
       <div className={style.box}>
         <select
@@ -105,29 +108,29 @@ export default function HomePage() {
             return <option value={e}>{e}</option>;
           })}
         </select>
-        <br/>
-        <br/>
-            <div>
-              <Paging
-                videogamesPerPage={videogamesPerPage}
-                allVideogames={allVideogames.length}
-                paging={paging}
-                currentPage={currentPage}
-              />
-            </div>
-            <br/>
+        <br />
+        <br />
+        <div>
+          <Paging
+            videogamesPerPage={videogamesPerPage}
+            allVideogames={allVideogames.length}
+            paging={paging}
+            currentPage={currentPage}
+          />
+        </div>
+        <br />
       </div>
       <div className={style.container}>
         {currentVideogames?.map((vg) => {
           return (
             <VideoGameCard
-            name={vg.name}
-            image={vg.image}
-            genres={vg.genres}
-            rating={vg.rating}
-            origin={vg.origin}
-            key={vg.id}
-            id={vg.id}
+              name={vg.name}
+              image={vg.image}
+              genres={vg.genres}
+              rating={vg.rating}
+              origin={vg.origin}
+              key={vg.id}
+              id={vg.id}
             />
           );
         })}
