@@ -52,14 +52,14 @@ export default function AddVideogameByName() {
     console.log("Platform: ", e.target.value);
     setInput({
       ...input,
-      platform: [...input.platform, e.target.value],
+      platform: [...new Set([...input.platform, e.target.value])],
     });
   }
 
   function handleGenres(e) {
     setInput({
       ...input,
-      genre: [...input.genre, e.target.value],
+      genre: [...new Set([...input.genre, e.target.value])],
     });
   }
 
