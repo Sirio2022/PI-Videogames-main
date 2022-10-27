@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import postvideogame from "../../actions/postvideogame";
-import getallvideogames from "../../actions/getallvideogames";
+//import getallvideogames from "../../actions/getallvideogames";
 import style from "./AddVideogame.module.css";
 
 function validate(input) {
@@ -89,7 +89,7 @@ export default function AddVideogameByName() {
       return alert("La plataforma es requerida");
     }
     dispatch(postvideogame(input));
-    dispatch(getallvideogames());
+    //dispatch(getallvideogames());
     alert(`El videojuego ${input.name} se ha agregado correctamente`);
     setInput({
       name: "",
