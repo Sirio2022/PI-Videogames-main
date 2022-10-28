@@ -10,13 +10,13 @@ h1 {
 }
 .formarea {
   display:flex;
-  background: #1b1415d2;
+  background: #3f3f3f;
   border-radius: 25px;
   padding: 1.9em;
   margin-top: 30px;
 /*  border-radius:80%; */
   border: 3px solid rgb(51, 65, 85);
-  box-shadow:4px 3px 6px 2px rgb(48, 67, 68); 
+  box-shadow:4px 3px 6px 2px rgb(23, 24, 24); 
 }
 h3{
     margin: 0px;
