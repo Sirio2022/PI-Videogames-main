@@ -10,7 +10,7 @@ const server = express();
 
 const cors = require("cors");
 const corsOptions = {
-  origin: "http://localhost:3001",
+  origin: "http://localhost:3000",
   credentials: true,
   optionSuccesStatus: 200,
 };
